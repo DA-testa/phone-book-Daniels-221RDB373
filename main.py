@@ -25,13 +25,13 @@ def process_queries(queries):
             contacts[cur_query.number] = cur_query.name
         elif cur_query.type == 'del':
             if cur_query.number in contacts:
-                del contacts [cur_query.number]
+                del contacts[cur_query.number]
         else:
             response = 'not found'
             if cur_query.number in contacts:
-                response = contacts [cur_query.number]
-            result.append (response)
-        return result
+                response = contacts[cur_query.number]
+            result.append(response)
+    return result
 
 if __name__ == '__main__':
     write_responses(process_queries(read_queries()))
